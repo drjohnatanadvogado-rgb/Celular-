@@ -129,7 +129,7 @@ def filtros_video(seg, W, H, fps, dur, global_cfg, fonte, tmpdir, idx):
     if seg.get("suave") and vel < 1:
         f.append(f"minterpolate=fps={fps}:mi_mode=mci:mc_mode=aobmc:vsbmc=1")
     f += [f"fps={fps}",
-          f"scale={W}:{H}:force_original_aspect_ratio=increase",
+          f"scale={W}:{H}:force_original_aspect_ratio=increase:flags=lanczos",
           f"crop={W}:{H}", "setsar=1",
           # garante a duração exata (congela o último quadro se faltar vídeo)
           f"tpad=stop_mode=clone:stop_duration={dur + 1}",
@@ -157,6 +157,8 @@ def filtros_video(seg, W, H, fps, dur, global_cfg, fonte, tmpdir, idx):
         f.append(f"scale={int(W * 1.08) // 2 * 2}:{int(H * 1.08) // 2 * 2}")
         f.append(f"crop={W}:{H}:x='(iw-ow)/2+(iw-ow)/2*sin(t*53)*exp(-t*4)'"
                  f":y='(ih-oh)/2+(ih-oh)/2*cos(t*41)*exp(-t*4)'")
+    if global_cfg.get("nitidez"):
+        f.append(f"unsharp=5:5:{float(global_cfg['nitidez'])}")
     if seg.get("pb") or global_cfg.get("pb"):
         f.append("hue=s=0")
     if "glitch" in efeitos:
@@ -223,6 +225,8 @@ def filtros_audio(seg, dur):
 
 def renderizar(cfg, base, saida_override=None, so_batidas=False):
     W, H = FORMATOS.get(cfg.get("formato", "16:9"), FORMATOS["16:9"])
+    if cfg.get("resolucao"):
+        W, H = (int(v) for v in cfg["resolucao"])
     fps = int(cfg.get("fps", 30))
     musica = os.path.join(base, cfg["musica"])
     m_ini = float(cfg.get("musica_inicio", 0))
