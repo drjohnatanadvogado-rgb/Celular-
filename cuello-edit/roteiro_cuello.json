@@ -1,0 +1,73 @@
+{
+  "musica": "musica/cumbia_de_los_trapos.mp3",
+  "musica_inicio": 4.05,
+  "atraso_musica": 4.5,
+  "volume_musica": 1.0,
+  "formato": "16:9",
+  "resolucao": [1280, 720],
+  "fps": 30,
+  "saida": "saida/cuello_homenagem.mp4",
+  "cor": { "contraste": 1.12, "saturacao": 1.15 },
+  "nitidez": 0.8,
+  "vinheta": true,
+  "fade_final": 2.5,
+
+  "trechos": [
+    { "_parte": "INTRO - torcida com sinalizadores cantando o hino, antes da música",
+      "arquivo": "torcida.mp4", "inicio": 18.0, "segundos": 4.5, "som": 1.0,
+      "efeitos": ["fade_entrada"],
+      "textos": [{ "texto": "FINAL DA SUL-AMERICANA 2026", "posicao": "meio", "tamanho": 0.08, "inicio": 0.6 }] },
+
+    { "_parte": "A MÚSICA ENTRA - Cuello intercalado com a torcida",
+      "arquivo": "cuello.mp4", "inicio": 0.5, "batidas": 4, "efeitos": ["flash"],
+      "textos": [{ "texto": "TOMÁS CUELLO", "posicao": "baixo", "tamanho": 0.11, "inicio": 0.3 }] },
+    { "arquivo": "torcida.mp4", "inicio": 33.0, "batidas": 2, "som": 0.35, "efeitos": ["pulso"] },
+    { "arquivo": "cuello.mp4", "inicio": 3.6, "batidas": 4, "velocidade": 0.7, "efeitos": ["flash"] },
+    { "arquivo": "torcida.mp4", "inicio": 0.0, "batidas": 2, "som": 0.35, "pb": true, "efeitos": ["pulso"] },
+    { "arquivo": "cuello.mp4", "inicio": 10.0, "batidas": 4,
+      "zoom": { "de": 1.0, "ate": 1.3, "x": 0.5, "y": 0.4 } },
+    { "arquivo": "torcida.mp4", "inicio": 11.0, "batidas": 2, "som": 0.35, "efeitos": ["flash"] },
+
+    { "_parte": "DROP - dribles, um corte a cada batida",
+      "arquivo": "cuello.mp4", "inicio": 36.4, "batidas": 2, "efeitos": ["flash", "tremor"] },
+    { "arquivo": "cuello.mp4", "inicio": 37.8, "batidas": 2, "velocidade": 0.5, "efeitos": ["glitch"] },
+    { "arquivo": "cuello.mp4", "inicio": 120.0, "batidas": 2, "efeitos": ["pulso"] },
+    { "arquivo": "cuello.mp4", "inicio": 121.4, "batidas": 2, "velocidade": 0.6, "efeitos": ["flash"] },
+    { "arquivo": "torcida.mp4", "inicio": 35.0, "batidas": 1, "som": 0.4, "efeitos": ["tremor"] },
+    { "arquivo": "cuello.mp4", "inicio": 256.0, "batidas": 2, "efeitos": ["pulso", "glitch"] },
+    { "arquivo": "cuello.mp4", "inicio": 257.4, "batidas": 2, "velocidade": 0.5,
+      "zoom": { "de": 1.0, "ate": 1.25, "x": 0.5, "y": 0.5 } },
+    { "arquivo": "cuello.mp4", "inicio": 326.0, "batidas": 2, "efeitos": ["flash"] },
+    { "arquivo": "cuello.mp4", "inicio": 327.4, "batidas": 1, "efeitos": ["pulso"] },
+    { "arquivo": "torcida.mp4", "inicio": 20.0, "batidas": 1, "som": 0.4, "efeitos": ["tremor"] },
+    { "arquivo": "cuello.mp4", "inicio": 394.5, "batidas": 2, "efeitos": ["pulso"] },
+    { "arquivo": "cuello.mp4", "inicio": 395.9, "batidas": 2, "velocidade": 0.5, "efeitos": ["flash"] },
+    { "arquivo": "torcida.mp4", "inicio": 36.0, "batidas": 2, "som": 0.5, "pb": true, "efeitos": ["flash", "tremor"] },
+
+    { "_parte": "GOLS - câmera lenta + explosão da torcida",
+      "arquivo": "cuello.mp4", "inicio": 76.4, "batidas": 4, "efeitos": ["flash"] },
+    { "arquivo": "cuello.mp4", "inicio": 79.2, "batidas": 4, "velocidade": 0.5, "efeitos": ["tremor"],
+      "textos": [{ "texto": "GOOOL DO GALO!", "posicao": "cima", "tamanho": 0.1, "inicio": 0.2 }] },
+    { "arquivo": "torcida.mp4", "inicio": 38.0, "batidas": 2, "som": 0.7, "efeitos": ["flash", "tremor"] },
+    { "arquivo": "cuello.mp4", "inicio": 165.5, "batidas": 4, "efeitos": ["flash"] },
+    { "arquivo": "cuello.mp4", "inicio": 162.0, "batidas": 4, "velocidade": 0.8,
+      "zoom": { "de": 1.0, "ate": 1.2, "x": 0.5, "y": 0.5 } },
+    { "arquivo": "torcida.mp4", "inicio": 40.0, "batidas": 2, "som": 0.7, "efeitos": ["flash", "tremor"] },
+    { "arquivo": "cuello.mp4", "inicio": 364.0, "batidas": 4, "efeitos": ["flash"] },
+    { "arquivo": "cuello.mp4", "inicio": 366.4, "batidas": 2, "velocidade": 0.5, "efeitos": ["tremor"] },
+
+    { "_parte": "ROSTO - zoom no rosto + congela",
+      "arquivo": "cuello.mp4", "inicio": 176.0, "batidas": 6, "velocidade": 0.5, "congelar": 3.9,
+      "zoom": { "de": 1.0, "ate": 1.8, "x": 0.59, "y": 0.39 }, "efeitos": ["flash", "flash_fim"] },
+
+    { "_parte": "FINAL - torcida + mensagem",
+      "arquivo": "cuello.mp4", "inicio": 2.0, "batidas": 2, "efeitos": ["pulso", "glitch"] },
+    { "arquivo": "cuello.mp4", "inicio": 4.0, "batidas": 2, "efeitos": ["pulso"] },
+    { "arquivo": "torcida.mp4", "inicio": 0.0, "batidas": 8, "som": 0.6, "pb": true,
+      "efeitos": ["flash", "fade_saida"],
+      "textos": [
+        { "texto": "RUMO AO TÍTULO", "posicao": "meio", "tamanho": 0.09, "inicio": 0.3, "fim": 2.6 },
+        { "texto": "VAMOS, GALO!", "posicao": "meio", "tamanho": 0.13, "inicio": 2.7 }
+      ] }
+  ]
+}

@@ -1,0 +1,8 @@
+demo/
+saida/*
+!saida/.gitkeep
+clipes/*
+!clipes/.gitkeep
+musica/*
+!musica/.gitkeep
+__pycache__/
